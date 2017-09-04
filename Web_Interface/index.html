@@ -1,0 +1,141 @@
+<!--
+QALISAR TECH IoT SYSTEMS
++--------------------------------+
+|COFFEE NETBREW SYSTEM VER 1.0   |
+|CREATED IN: 15/06/2017          |
+|LAST MOD.: 15/06/2017           |
+|CREATED BY: DanZDiasM           |
++--------------------------------+
+
+This is a part of a IoT system intented to run on a embedded system,
+this website is made to be only the inteface to control and check 
+status of the electronic device, in this case, the coffee brewer.
+ -->
+
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>NETBREW Coffee</title>
+	<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=VT323">
+
+		<style> 
+		.flex-container {
+			display: -webkit-flex;
+			display: flex;  
+			-webkit-flex-flow: row wrap;
+			flex-flow: row wrap;
+			text-align: center;
+		}
+
+		.flex-container > * {
+			padding: 15px;
+			-webkit-flex: 1 100%;
+			flex: 1 100%;
+		}
+
+		.article {
+			text-align: left;
+			font-family: 'VT323', serif;
+			font-size: 20px;
+		}
+
+		header {
+			background:orange ;
+			color:black;
+			font-family: 'VT323', serif;}
+			
+		footer {
+			background:darkorange ;
+			color:white;
+			font-family: 'VT323', serif;}
+			
+		.nav {background:black;}
+
+		.nav ul {
+			font-family: 'VT323', serif;
+			list-style-type: none;
+			padding: 0;
+		}
+		.nav ul a {
+			font-family: 'VT323', serif;
+			color:orange;
+		}
+
+		@media all and (min-width: 768px) {
+			.nav {text-align:left;-webkit-flex: 1 auto;flex:1 auto;-webkit-order:1;order:1;}
+			.article {-webkit-flex:5 0px;flex:5 0px;-webkit-order:2;order:2;}
+			footer {-webkit-order:3;order:3;}
+		}
+		button{
+			font-family: 'VT323', serif;
+			background: orange;
+			align:center;
+			width:80px;
+		}
+			
+		th,td{
+			align:center;
+			border: 1px solid black;
+		}
+
+		</style>
+	</head>
+	
+	<body>
+		<div class="flex-container">
+		<header>
+		  <h1 style="marquee-style">COFFEE NETBREW - Network Interface</h1>
+		</header>
+		<nav class="nav">
+		<ul>
+		  <li><a href="#">DASHBOARD</a></li>
+		  <li><a href="#">COFFEE</a></li>
+		  <li><a href="#">ABOUT</a></li>
+		</ul>
+		</nav>
+		<article class="article">
+			<h1>Coffee Brewer - ADVANCED DASHBOARD</h1>
+			<fieldset>
+				<legend>STATUS</legend>
+				<table>
+					<tr>
+						<th>-SUBSYSTEM-</th>
+						<th style="width:80px;">-STATUS-</th>
+					</tr>
+					<tr>
+						<td>COIL/HEATER</td>
+						<td><b>UNKNOWN</b></td>
+					</tr>
+					<tr>
+						<td>WATER LVL</td>
+						<td><b>UNKNOWN</b></td>
+					</tr>
+				</table>
+			</fieldset>
+			
+			<fieldset>
+				<legend>CONTROLS</legend>
+				
+				<table>
+					<tr>
+						<th>-SUBSYSTEM-</th>
+						<th>-CONTROL-</th>
+					</tr>
+					<tr>
+						<td>COIL/HEATER</td>
+						<td><button>ON/OFF</button></td>
+					</tr>
+					<tr>
+						<td>LIGHT</td>
+						<td><button>ON/OFF</button></td>
+					</tr>
+				</table>
+			</fieldset>
+		</article>
+		
+		<footer>Qalisar Tech &copy; IoT Systems</footer>
+		
+		</div>
+	</body>
+</html>
