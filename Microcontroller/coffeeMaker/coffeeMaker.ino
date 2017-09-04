@@ -68,12 +68,12 @@ pinMode (faultLed, OUTPUT);
 GpioOutTest(faultLed);
 
 //////Actuator
-Serial.println("I - RELAY Setup");
+Serial.println("II - RELAY Setup");
 pinMode (Relay, OUTPUT);
 GpioOutTest(Relay);
 
 //////Sensors
-Serial.println("I - SENSORS Setup");
+Serial.println("III - SENSORS Setup");
 pinMode (Wsens, INPUT);
 Serial.println(" - Water Level Sensor.");
 GpioInTest(Wsens);
@@ -86,7 +86,7 @@ GpioInTest(Jsens);
 
 
 //////Variables
-Serial.println("I - VARIABLES Setup");
+Serial.println("IV - VARIABLES Setup");
 lastb1 = LOW;
 modeSel = 0;
 msg = 0;
@@ -177,7 +177,6 @@ void loop() {
 		  LedFade(rdyLed,127,1);
 		  
 		  }
-		
 		//---Heating/Keep Warm Mode---
 		 if ((wsensRCV == HIGH)&&(modeSel == 1)){
 		  if(wsensRCV == HIGH){
